@@ -1,6 +1,6 @@
 "use strict"
 const client = require('mongodb').MongoClient;
-const url_database = 'mongodb://YouDataConnectDataBase';
+const url_database = 'mongodb://*';
 const nameDB = "blog";
 const nameCollection = "blog"
 
