@@ -1,0 +1,39 @@
+$gutter: 12;
+$color: #333;
+$padding: 10px;
+$border-width: 1px;
+$border: $border-width solid #333;
+$menu-height: 80px;
+$backgrouund-color: #FAFAFA;
+$animate: all 1s cubic-bezier(.22, .61, .36, 1) 0.01s;
+$shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+$color-two: lighten($color, 5%);
+$color-three: lighten($color, 95%);
+$color-text: rgb(34, 83, 89);
+$color-bg-h: rgb(230, 249, 255);
+$height-search: 35px;
+$profile-img: 50px;
+$profile-img-mimi: 15px;
+$profile-img-comment: 200px;
+$comment-text: 148.45px;
+$font-size-h2: 1.3em;
+$font-size-small: 0.7em;
+$line-height: 1.4em;
+$line-height-xs: 1.3em;
+$line-height-lg: 2em;
+
+$screen-xs-max: 767px;
+$screen-sm-max: 991px;
+$screen-md-max: 1199px;
+
+$font-size-base: 0.90em;
+$font-size-base-lg: 1em;
+$font-size-base-md: 0.87em;
+$font-size-small-xs: 0.5em;
+
+$navi-padding-md: 5px;
+
+$textarea-height: 200px;
+$textarea-background: RGBA(49, 223, 252, 0.02);
+$textarea-border: 1px solid #EAEAEA;
+$profile-comment-img: 100px;

@@ -1,0 +1,77 @@
+body{
+    width:100%;
+    background-color:$backgrouund-color;
+    height: auto;
+    position: relative;
+    font-family: "Casper";
+    font-size: $font-size-base;
+    @include mq(lg){font-size: $font-size-base-lg;}
+    @include mq(md){font-size: $font-size-base-md;}
+    color:$color-text;
+    margin:0px;
+}
+
+@for $i from 1 through 6{
+    h#{$i}{
+        display:block;
+        text-align: center;
+        margin:0;
+        padding:$padding*4 0px;
+        background:$color-bg-h;
+    }
+}
+h1{
+    font-size:2em;
+    position:fixed;
+    top:0;
+    left:25%;
+    width:69%;
+    padding:3%;
+    @include mq(xs){width:82%; left:0;};
+    z-index:10;
+    @include vendor(box-shadow, 0px 0px 1px 0px rgba(0, 0, 0, 0.2));
+    @include mq(xs){padding: 3% 3% 3% 15%; font-size: 1.2em;};
+}
+.navi[state="on"] + h1{
+    font-size:2em;
+    position:fixed;
+    top:0;
+    left:25%;
+    width:69%;
+    padding:3%;
+    @include mq(xs){width:82%; left:0;};
+    z-index:10;
+    @include vendor(transition, $animate);
+    @include vendor(box-shadow, 0px 0px 1px 0px rgba(0, 0, 0, 0.2));
+    @include mq(xs){padding: 3% 3% 3% 15%; font-size: 1.2em;};
+}
+.navi[state="off"] + h1{
+    font-size:2em;
+    position:fixed;
+    top:0;
+    left:3%;
+    width:97%;
+    padding:3%;
+    @include mq(xs){width:82%; left:0;};
+    @include mq(sm){width:89%; left: 5% !important;};
+    @include mq(md){width:90%; left: 4% !important;};
+    @include mq(lg){width:91%; left: 3% !important;};
+    z-index:10;
+    @include vendor(transition, $animate);
+    @include vendor(box-shadow, 0px 0px 1px 0px rgba(0, 0, 0, 0.2));
+    @include mq(xs){padding: 3% 3% 3% 15%; font-size: 1.2em;};
+}
+.error-reload{
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 2em;
+    height:41px;
+    width:100%;
+    a:hover{
+        text-decoration:underline;
+        i{
+            @include vendor(transition,$animate);
+            color:$color-two;
+        }
+    }
+}

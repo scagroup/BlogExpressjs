@@ -1,0 +1,14 @@
+@mixin mq($sc){
+   @if  $sc == xs{
+       @media only screen and (max-width: $screen-xs-max) { @content; };
+   }
+   @else if  $sc == sm{
+       @media only screen and (min-width: $screen-xs-max + 1) and (max-width: $screen-sm-max) { @content; };
+   }
+   @else if  $sc == md{
+       @media only screen and (min-width: $screen-sm-max + 1) and (max-width: $screen-md-max) { @content; };
+   }
+   @else if  $sc == lg{
+       @media only screen and (min-width: $screen-md-max+1) { @content; };
+   }
+}

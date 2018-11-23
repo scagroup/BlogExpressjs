@@ -1,0 +1,180 @@
+.comment{
+    display: inline-block;
+    div{
+        padding:0;
+        float:left;
+    }
+    .comm-prof-wrapper{
+        width:12%;
+        .comm-prof{
+            text-align:center;
+            line-height:$font-size-base;
+            padding: $padding*2 0;
+            width:100%;
+            .comm-prof-img{
+                width:inherit;
+                max-width:$profile-img-comment;
+                max-height:$profile-img-comment;
+                padding: 1px;
+                border-radius: 50%;
+                border: $border;
+                .comm-prof-img-overflow{
+                    overflow: hidden;
+                    border-radius: inherit;
+                } 
+            }
+            .comm-profile-dop-info{
+                width:100%;
+                padding: 0;
+                font-size:$font-size-small;
+                padding: $padding/5;
+                @include mq(xs){padding: $padding/5; font-size:$font-size-small-xs;};
+                div{
+                    float:left;
+                    width:100%; 
+                    text-align:center;
+                    padding:0;
+                }
+                .comm-prof-nick{
+                    width:inherit;
+                    font-family: Casper-bold;
+                }
+                .comm-prof-dat{
+                    width:inherit;
+                }
+            }
+        } 
+    }
+    .comm-text-wrapper{
+        width:88%;
+        .comm-text{
+            margin:$padding;
+            height: $comment-text;
+            overflow-y: auto;
+            font-size:$font-size-base*0.8;
+            line-height: $font-size-base*0.95;
+        }
+    }
+    .comm-like-dislike-wrapper{
+        width:100%;
+        div{
+            padding:$padding;    
+        }
+        .comm-like-dislike{
+            height:3.2*$padding;
+            float:right;
+            .like, .dislike{
+                i{
+                    &::after{
+                        content:" ";
+                        padding-right:$padding/2;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.add-comment{
+    display:block;
+    height:200px;
+    .add-comment-wrapper{
+        margin:0;
+        padding:0;
+        display:inline-block;
+        width:100%;
+        height:inherit;
+        > div{
+            float:left;
+        }
+        div{
+            padding:0;
+            margin:0;
+            position:relative;
+        }
+        .add-comment-textarea-wrapper{
+            width: 100%;
+            position:absolute !important;
+            height:inherit;
+            top:0;
+            .textarea-add-comment{
+                overflow: scroll;
+                .text-add-write-comment{
+                    height: 180px;
+                    border: $textarea-border;
+                    background: $textarea-background;
+                    min-height:inherit;
+                    max-height:inherit;
+                    padding-left: 16%;
+                    padding-right: 16%;
+                    padding-top:$padding;
+                    padding-bottom: $padding;
+                    margin:0;
+                }
+            }
+        }
+        .add-comment-button-wrapper{
+            width: 15%;
+            float:right;
+            .button-add-comment{
+                text-transform: uppercase;
+                button{
+                    background:$color-three;
+                    margin:0;
+                    //border: $textarea-border;
+                    border: none;
+                    color: $color-text;
+                    height: 20*$padding;
+                    width:100%;
+                    word-break: break-all;
+                    margin: 1px -1px;
+                    border-left: $textarea-border;
+                    &::after{
+                        content: " \f27b";
+                        font: normal normal normal 14px/1 FontAwesome;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+                }
+            }
+        }
+        .add-comment-profile-wrapper{
+            width: 15%;
+            height: inherit;
+            display: inline-block;
+            background:$color-three;
+            border-right: $textarea-border;
+            div{
+                padding: $padding/2;
+                margin: 0;
+            }
+            .add-comment-profile-text{
+                text-align:center;
+                line-height:2*$padding;
+                word-break: break-all;
+            }
+            .add-comment-profile-img-wrapper{
+                border-radius:50%;
+                border:$border;
+                width:70%;
+                max-width:$profile-comment-img;
+                max-height:$profile-comment-img;
+                padding:1px;
+                margin: 8px auto;
+                .add-comment-profile-img-overflow{
+                    overflow:hidden;
+                    border-radius:inherit;
+                    width:100%;
+                    padding:0;
+                }
+            }
+            .add-comment-profile-nick{
+                font-family: Casper-bold;
+                text-align:center;
+                line-height:2*$padding;
+            }
+        }
+    }
+}

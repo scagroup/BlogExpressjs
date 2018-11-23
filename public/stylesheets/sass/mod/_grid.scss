@@ -1,0 +1,77 @@
+.container{
+    float:left;
+    width:75%;
+    @include mq(xs){width:100%;};
+    @include vendor(transition, $animate);
+    line-height:$font-size-base;
+    hr{
+        padding:$padding;
+    }
+    div{
+        position:relative;
+    }
+}
+.navi[state="on"] + h1 + .container{
+    float:left;
+    width:75%;
+    @include mq(xs){width:100%;};
+    @include vendor(transition, $animate);
+    line-height:$font-size-base;
+    hr{
+        padding:$padding;
+    }
+    div{
+        position:relative;
+    }
+}
+.navi[state="off"] + h1 + .container{
+    float:left;
+    width:97%;
+    @include mq(xs){width:100%;};
+    @include mq(sm){width:95%;};
+    @include mq(md){width:95%;};
+    @include mq(lg){width:97%;};
+    @include vendor(transition, $animate);
+    line-height:$font-size-base;
+    hr{
+        padding:$padding;
+    }
+    div{
+        position:relative;
+    }
+}
+.navi + .container{
+    float:left;
+    width:76%;
+    @include mq(xs){width:100%;};
+    @include vendor(transition, $animate);
+    line-height:$font-size-base;
+    hr{
+        padding:$padding;
+    }
+    div{
+        position:relative;
+    }
+}
+.menu[state="off"] + h1 + .container{
+    float:left;
+    width:98%;
+    @include mq(xs){width:100%;};
+    @include vendor(transition, $animate);
+    line-height:$font-size-base;
+    hr{
+        padding:$padding;
+    }
+    div{
+        position:relative;
+    }
+}
+.row{
+    width:100%;
+    height: auto;
+    clear:both;
+}
+
+@for $i from 1 through $gutter{
+    @include col($i);
+}

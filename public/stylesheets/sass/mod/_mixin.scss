@@ -1,0 +1,26 @@
+@mixin vendor($prefix,$value){
+    -webkit-#{$prefix}: $value;
+    -moz-#{$prefix}: $value;
+    -o-#{$prefix}: $value;
+    -ms-#{$prefix}: $value;
+    #{$prefix} : $value;
+}
+
+@mixin col($colum){
+    .col-md-#{$colum}{
+        width:(((100%/$gutter)*$colum));
+        float:left;
+        position:relative;
+        img{
+            max-width:100%;
+        }
+        div{
+            padding:$padding 5*$padding;
+            line-height: $line-height-xs;
+            @include mq(xs){padding: $padding 2*$padding 2*$padding 6*$padding;};
+            @include mq(md){padding: $padding/2 5*$padding};
+            @include mq(lg){padding: $padding 5*$padding};
+            @include mq(xs){line-height: $line-height-xs; text-align:justify;};
+        }
+    }
+}

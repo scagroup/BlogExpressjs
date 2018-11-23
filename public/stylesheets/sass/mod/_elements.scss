@@ -1,0 +1,69 @@
+small{
+    font-size:$font-size-small;
+}
+.clearfix{
+    clear:both;
+}
+strong{
+    //font-family: Casper-bold;
+}
+a{
+    text-decoration:none;
+    color:lighten($color, 15%);
+    &:hover{
+        text-decoration: undeline !important;
+    }
+}
+ul{
+    li{
+        a{ @extend a}
+    }
+}
+
+.badge{
+    padding: 0px;
+    border-radius: 50%;
+    float: right;
+    border: $border;
+    width: 2*$padding;
+    height: 2*$padding;
+    text-align: center;
+    line-height: 2*$padding;
+    font-size: $padding;
+}
+
+hr{
+    width:auto;
+    display:block;
+    height:0px;
+    border:none;
+    border-bottom:1px dotted $color-text;
+    margin:0px;
+}
+
+.clear-h1{
+    width:100%;
+    height:15*$padding;
+    @include mq(xs){height: 78px;};
+}
+.text{
+    .img{
+        @include vendor(transition, $animate);
+        width: 100%;
+        padding: 40px 2px 2px 2px !important;
+        @include vendor(transition, $animate);
+        &:hover{
+            background: $color-bg-h;
+        }
+    }
+    .ALT{
+        position: absolute !important;
+        line-height: 2*$padding;
+        padding: $padding !important;
+        margin: 0;
+        top: 0;
+        color:$color-two;
+        font-size:$font-size-small;
+    }
+}
+
